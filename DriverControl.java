@@ -2,7 +2,9 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+@TeleOp(name="DriverControl", group="lions")
 public class DriverControl extends LinearOpMode {
     //initiating motors
     private DcMotor frontLeft;
@@ -45,7 +47,7 @@ public class DriverControl extends LinearOpMode {
         frontLeft.setPower(fbLeftStick);
         backLeft.setPower(fbLeftStick);
         backRight.setPower(fbRightStick);
-        frontRight.setPower(fbRightstick);
+        frontRight.setPower(fbRightStick);
         telemetry.addData("Target Power", fbLeftStick);
         telemetry.addData("Target Power", fbRightStick);
         telemetry.addData("Motor Power", frontLeft.getPower());
